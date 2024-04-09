@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <meta name="description" content="This is a Portfolio website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #13293D;
+            color: #ffffff;
+        }
+        header {
+            background-color: #1E4157;
+        }
+        .projects {
+            background-color: #1E4157;
+        }
+        footer {
+            background-color: #1E4157;
+        }
+        a {
+            color: #00ADB5; 
+        }
+        input[type="button"], input[type="submit"] {
+            background-color: #00ADB5;
+            border: 1px solid #00ADB5;
+        }
+    </style>
+    <script>
+        function res_down() {
+            const button = document.querySelector('.res_btn');
+
+            button.addEventListener('click', () => {
+                const filePath = button.getAttribute('Resume.txt');
+                const link = document.createElement('a');
+                link.href = filePath;
+                link.download = 'Resume.txt';
+                link.click();
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="name">Arshath</h1>
+        <nav class="nav-bar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div>
+                <h1>Hi, I'm <span class="span-text">Arshath</span></h1>
+                <h3>Frontend Developer</h3>
+                <input type="button" class="res_btn" data-file-path="Resume.txt" value="View Resume" onclick="res_down()">
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzyqfM_WpQ77CGl1AdTtUGGPbWckaFvldCEanzkBMvfQ&s" alt="About Image">
+                    </div>
+                    <div class="about-col-2">
+                        <div>
+                            <h2 class="heading">About <span class="span-text">me</span></h2>
+                            <p>I am a Frontend developer. I like to make one with abstract themes which makes it look simple and cool.<br/>
+                            I'm also an upcoming app developer.</p>
+                        </div>
+                        <div class="skill">
+                            <h2 class="heading"><span class="span-text">My</span> Skills</h2>
+                            <p>I know the basics of the below mentioned languages.</p>
+                            <ul>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>MySQL</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div>
+                <h2 class="heading">My <span class="span-text">Projects</span></h2>
+                <div class="project-list">
+                    <div>
+                        <h3>A Basic Calculator</h3>
+                        <p>This project is made with HTML and CSS. It's a website containing a simple calculator for basic arithmetic operations.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <h3>Portfolio</h3>
+                        <p>I have created a Portfolio website for myself using HTML and CSS, similar to the one you're viewing. It provides basic information about me and my projects.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <h3>Landing Page</h3>
+                        <p>The landing page website was also made with HTML and CSS. It features...</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div>
+                <h2 class="heading">Contact <span class="span-text">me</span></h2>
+                <form action="">
+                    <table class="form-table">
+                        <tr>
+                            <td><input type="text" name="uname" value="" placeholder="Enter your name" required/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="mail" value="" placeholder="Enter your e-mail id" required /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="tel" name="mobile" value="" pattern="[0-9]{10}" placeholder="Enter your phone number" /></td>
+                        </tr>
+                        <tr>
+                            <td><textarea rows="5" cols="50" placeholder="Enter your message"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Send Message" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="copyright">&copy; 2024 Srihari | All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
